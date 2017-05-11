@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+
+    <title>普吉之行</title>
+
+    <script src="cordova.js"></script>
+    <script src="./lib/onsenui/js/onsenui.js"></script>
+    <script src="./lib/angular/angular-1.5.8.min.js"></script>
+    <script src="./lib/onsenui/js/angular-onsenui.js"></script>
+    <script src="./js/controller.js"></script>
+
+    <link rel="stylesheet" href="./lib/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="./lib/onsenui/css/onsen-css-components.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <ons-navigator var="myNavigator" ng-controller="indexController" class="fadeIn">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button ng-click="carousel.prev()">
+                        <ons-icon icon="md-chevron-left"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">我的普吉岛之行</div>
+                <div class="right">
+                    <ons-toolbar-button ng-click="carousel.next()">
+                        <ons-icon icon="md-chevron-right"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+            </ons-toolbar>
+
+            <ons-carousel var="carousel" fullscreen swipeable auto-scroll overscrollable>
+                <ons-carousel-item ng-repeat="index in [1,2,3]">
+                    <img ng-src="img/screen{{index}}.JPG" style="height: 100%; width: 100%;">
+                </ons-carousel-item>
+            </ons-carousel>
+
+            <ons-fab position="bottom center" ng-click="myNavigator.pushPage('main.html')">
+                <label>GO</label>
+            </ons-fab>
+        </ons-page>
+    </ons-navigator>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+<ons-page>
+    <ons-dialog var="imageDialog">
+        <div style="text-align: center; padding: 10px;">
+            <!--<img ng-src="img/{{foodImageName}}" style="max-width: 300px; max-height: 300px;">-->
+            <ons-carousel var="carousel" style="height: 300px; width:100%" swipeable auto-scroll overscrollable>
+                <!--<ons-carousel-item ng-repeat="foodImg in foodObj.imageNames" ng-style="background-image: url('img/{{foodImg}}')">-->
+                <ons-carousel-item ng-repeat="foodImg in imageNames">
+                    <img ng-src="img/{{foodImg}}" style="height: 100%; width: 100%;">
+                </ons-carousel-item>
+            </ons-carousel>
+
+            <p>
+                <ons-button ng-click="imageDialog.hide()">Close</ons-button>
+            </p>
+        </div>
+    </ons-dialog>
+</ons-page>

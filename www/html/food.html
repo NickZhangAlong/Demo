@@ -1,0 +1,47 @@
+<ons-page>
+    <ons-list modifier="material">
+        <ons-list-item modifier="material" ng-repeat="i in breakfasts" ng-click="showImageDialog(i.imageNames)">
+            <div class="list__item__left">
+                <span ng-show="$first" class="contact-initials">早餐</span>
+            </div>
+            <div class="list__item__center">
+                <ons-ripple color="rgba(0, 0, 0, 0.1)"></ons-ripple>
+                <img ng-src="img/{{i.imageNames[0]}}" class="list__item__thumbnail">
+                <div>Dave Graham</div>
+            </div>
+        </ons-list-item>
+
+        <ons-list-item modifier="material" ng-repeat="i in lunches" ng-click="showImageDialog(i.imageNames)">
+            <div class="list__item__left">
+                <span ng-show="$first" class="contact-initials">中餐</span>
+            </div>
+            <div class="list__item__center" style="float: right;">
+                <ons-ripple color="rgba(0, 0, 0, 0.1)"></ons-ripple>
+                <img ng-src="img/{{i.imageNames[0]}}" class="list__item__thumbnail">
+                <div>Dave Graham</div>
+            </div>
+        </ons-list-item>
+
+        <ons-list-item modifier="material" ng-repeat="i in diners" ng-click="showImageDialog(i.imageNames)">
+            <div class="list__item__left">
+                <span ng-show="$first" class="contact-initials">晚餐</span>
+            </div>
+            <div class="list__item__center" style="float: right;">
+                <ons-ripple color="rgba(0, 0, 0, 0.1)"></ons-ripple>
+                <img ng-src="img/{{i.imageNames[0]}}" class="list__item__thumbnail">
+                <div>Dave Graham</div>
+            </div>
+        </ons-list-item>
+
+        <ons-list-item modifier="material" ng-repeat="i in others" ng-click="showImageDialog(i.imageNames)">
+            <div class="list__item__left">
+                <span ng-show="$first" class="contact-initials">其他</span>
+            </div>
+            <div class="list__item__center" style="float: right;">
+                <ons-ripple color="rgba(0, 0, 0, 0.1)"></ons-ripple>
+                <img ng-src="img/{{i.imageNames[0]}}" class="list__item__thumbnail">
+                <div>Dave Graham</div>
+            </div>
+        </ons-list-item>
+    </ons-list>
+</ons-page>

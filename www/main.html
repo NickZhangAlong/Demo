@@ -1,0 +1,21 @@
+<ons-page>
+    <ons-toolbar>
+        <div class="left">
+            <ons-back-button>后退</ons-back-button>
+        </div>
+        <div class="center">
+            {{ toolbarTitle }}
+        </div>
+        <div class="right">
+            <ons-toolbar-button ng-click="mySplitter.left.open()">
+                <ons-icon icon="ion-navicon"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+
+    <ons-splitter var="mySplitter">
+        <ons-splitter-side side="left" width="220px" collapse swipeable page="html/menu.html">
+        </ons-splitter-side>
+        <ons-splitter-content page="html/place.html"></ons-splitter-content>
+    </ons-splitter>
+</ons-page>
